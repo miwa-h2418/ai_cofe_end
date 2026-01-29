@@ -1,0 +1,508 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', sans-serif;
+  color: #333;
+  line-height: 1.8;
+  background: #fff;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.headerContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.nav {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+  transition: opacity 0.3s;
+  letter-spacing: 0.05em;
+}
+
+.nav a:hover {
+  opacity: 0.6;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 85vh;
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+}
+
+.heroSubtitle {
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  opacity: 0.9;
+}
+
+/* Intro Section */
+.intro {
+  padding: 5rem 2rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.introTitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.introText {
+  font-size: 1rem;
+  line-height: 2;
+  color: #666;
+}
+
+/* Philosophy Section */
+.philosophy {
+  padding: 4rem 2rem;
+  background: #fafafa;
+}
+
+.philosophyGrid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.philosophyCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.philosophyCard:hover {
+  transform: translateY(-5px);
+}
+
+.philosophyCard.large {
+  grid-row: span 2;
+}
+
+.cardImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+
+.philosophyCard.large .cardImage {
+  min-height: 100%;
+}
+
+.cardContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+}
+
+.cardContent h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.cardContent p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Products Section */
+.products {
+  padding: 5rem 2rem;
+  background: #fff;
+}
+
+.productsContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.productsText h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.productsText ul {
+  list-style: none;
+}
+
+.productsText li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.productImage {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Store Locations */
+.storeLocations {
+  padding: 4rem 2rem;
+  background: #f5f5f5;
+}
+
+.locationGrid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.locationCard {
+  text-align: center;
+}
+
+.locationImage {
+  position: relative;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.locationCard h3 {
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+/* Online Store */
+.onlineStore {
+  padding: 5rem 2rem;
+  text-align: center;
+  background: #fff;
+}
+
+.onlineStore h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.storeDescription {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 3rem;
+  line-height: 2;
+}
+
+.storeProducts {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.storeProduct {
+  text-align: center;
+}
+
+.storeProductImage {
+  position: relative;
+  aspect-ratio: 3/4;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.storeProduct p {
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+}
+
+.btn {
+  padding: 1rem 3rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  letter-spacing: 0.05em;
+}
+
+.btn:hover {
+  background: #555;
+}
+
+/* News Section */
+.news {
+  padding: 5rem 2rem;
+  background: #fafafa;
+}
+
+.news h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.newsGrid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.newsCard {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.newsCard:hover {
+  transform: translateY(-5px);
+}
+
+.newsImage {
+  position: relative;
+  aspect-ratio: 16/10;
+}
+
+.newsCard p {
+  padding: 0 1.5rem;
+}
+
+.newsDate {
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.newsCard h3 {
+  font-size: 1.1rem;
+  padding: 0 1.5rem 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+/* Footer Info */
+.footerInfo {
+  padding: 4rem 2rem;
+  background: #fff;
+}
+
+.footerGrid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+
+.footerColumn h4 {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.footerColumn ul {
+  list-style: none;
+}
+
+.footerColumn li {
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footerColumn li:hover {
+  color: #333;
+}
+
+/* Footer */
+.footer {
+  padding: 3rem 2rem;
+  background: #2a2a2a;
+  color: white;
+  text-align: center;
+}
+
+.footerLogo {
+  margin-bottom: 2rem;
+}
+
+.logoMark {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+}
+
+.footerLogo p {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  opacity: 0.7;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footerLinks a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: opacity 0.3s;
+}
+
+.footerLinks a:hover {
+  opacity: 0.6;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  letter-spacing: 0.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .philosophyGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .productsContent {
+    grid-template-columns: 1fr;
+  }
+  
+  .storeProducts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .newsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .footerGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .philosophyGrid,
+  .locationGrid,
+  .storeProducts,
+  .newsGrid,
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .philosophyCard.large {
+    grid-row: span 1;
+  }
+}
